@@ -49,6 +49,7 @@ done
 # Install dependencies to build palen1x
 apt-get update
 apt-get install -y --no-install-recommends wget gawk debootstrap mtools xorriso ca-certificates curl libusb-1.0-0-dev gcc make gzip xz-utils unzip libc6-dev
+apt add gcompat
 
 # Get proper files
 if [ "$1" = "RELEASE" ]; then
