@@ -117,7 +117,7 @@ mount -vt proc proc rootfs/proc
 cp /etc/resolv.conf rootfs/etc
 cat << ! > rootfs/etc/apk/repositories
 http://dl-cdn.alpinelinux.org/alpine/v3.12/main
-http://dl-cdn.alpinelinux.org/alpine/edge/community
+http://dl-cdn.alpinelinux.org/alpine/v3.12/community
 http://dl-cdn.alpinelinux.org/alpine/edge/testing
 !
 
