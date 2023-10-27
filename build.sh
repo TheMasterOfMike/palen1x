@@ -48,7 +48,7 @@ done
 
 # Install dependencies to build palen1x
 apt-get update
-apt-get install -y --no-install-recommends gcompat wget gawk debootstrap mtools xorriso ca-certificates curl libusb-1.0-0-dev gcc make gzip xz-utils unzip libc6-dev
+apt-get install -y --no-install-recommends wget gawk debootstrap mtools xorriso ca-certificates curl libusb-1.0-0-dev gcc make gzip xz-utils unzip libc6-dev
 
 # Get proper files
 if [ "$1" = "RELEASE" ]; then
@@ -126,7 +126,7 @@ sleep 2
 cat << ! | chroot rootfs /usr/bin/env PATH=/usr/bin:/usr/local/bin:/bin:/usr/sbin:/sbin /bin/sh
 apk update
 apk upgrade
-apk add bash alpine-base usbmuxd ncurses udev openssh-client sshpass newt
+apk add gcompat bash alpine-base usbmuxd ncurses udev openssh-client sshpass newt
 apk add --no-scripts linux-lts linux-firmware-none
 rc-update add bootmisc
 rc-update add hwdrivers
